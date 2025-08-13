@@ -1,6 +1,16 @@
 ui:
   base_url: "https://sdaia.gov.sa/en/default.aspx"
+
 api:
   base_url: "https://dummyjson.com"
+
 timeouts:
   default: 15
+
+locators:
+  search_icon_XPATH: "//a[@title='fal fa-search']"
+  search_field_XPATH: "//div[@class='overlayMenu']/div/div/input[@id='searchField']"
+  search_button_XPATH: "//div[@class='overlayMenu']/div/div/input[@id='submitSearch']"
+  no_results_XPATH: "//div[contains(text(), 'Nothing here matches your search')]"
+  suggestions_XPATH: "//div[@class='overlayMenu']/div//h4[text()='suggestions']/../a"
+  selected_XPATH: "//div[@class='overlayMenu']/div//h4[text()='suggestions']/../a[7]"

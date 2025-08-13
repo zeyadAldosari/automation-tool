@@ -1,10 +1,12 @@
-import os, yaml
-from dotenv import load_dotenv
-load_dotenv()
+import os
+import yaml
 
 def load_config():
-    with open("configs/config.yaml", "r", encoding="utf-8") as f:
+    """Load configuration from YAML and override with environment variables if set."""
+    config_path = os.path.join("configs", "config.yaml")
+    
+    with open(config_path, "r", encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
-    cfg["ui"]["base_url"] = os.getenv("UI_BASE_URL", cfg["ui"]["base_url"])
-    cfg["api"]["base_url"] = os.getenv("API_BASE_URL", cfg["api"]["base_url"])
     return cfg
+
+config = load_config()
