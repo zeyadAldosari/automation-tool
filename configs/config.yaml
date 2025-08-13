@@ -1,0 +1,6 @@
+ui:
+  base_url: "https://sdaia.gov.sa/en/default.aspx"
+api:
+  base_url: "https://dummyjson.com"
+timeouts:
+  default: 15
